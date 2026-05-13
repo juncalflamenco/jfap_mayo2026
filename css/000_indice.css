@@ -1,0 +1,18 @@
+body{
+    background-color: blanchedalmond;
+}
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    border-radius: 20px ;
+}
+h1{
+    text-align: center;
+    background-color: rgb(207, 128, 128);
+    border: radius 20px; 
+    padding:10px ;
+    font-size:80px ;
+    color: rgb(183, 183, 196);
+
+}
