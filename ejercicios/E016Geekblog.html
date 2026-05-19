@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
+
+    <style>
+        header {
+            font-family: 'Courier New', Courier, monospace;
+            width: 100%;
+            background-color: #112b3c;
+            color: white;
+        }
+
+        nav {
+            background-color: #112b3c
+        }
+
+        nav li {
+            display: inline-block;
+            font-family: sans-serif;
+            background-color: #1b435e;
+            color: white;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+
+        nav li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav li :hover {
+            background-color: #112b3c
+        }
+
+        main {
+            margin-top: 30px;
+            width: 100%;
+            height: 600px;
+            background-color: white;
+        }
+
+        article {
+            margin: bottom 30px;
+            border-bottom: 1px dashed black;
+            padding: 40px;
+        }
+
+        article p {
+            font-weight: 200;
+
+        }
+
+        h2 {
+            margin: 20px;
+            margin: bottom 20px;
+            font-weight: 500;
+        }
+
+        footer {
+            width: 100%;
+            background-color: #112b3c;
+            padding: 10px;
+            color: white;
+        }
+
+        .contenedor {
+            width: 960px;
+            /* border: 1px solid rgb(65, 15, 230); */
+            margin: 0 auto;
+        }
+
+        .read-full {
+            margin: top 40px;
+            margin-bottom: 20px;
+        }
+
+        .read-full full a {
+            color: #112b3c;
+
+        }
+
+        .read-full a:hover {
+            color: white;
+            background-color: #112b3c;
+        }
+
+        .pastilla {
+            background-color: rgb(236, 236, 236);
+            padding: 5px 10px;
+            border: 1px solid rgb(202, 200, 200);
+            border-radius: 5px;
+            margin-right: 7px;
+        }
+
+        .pastilla a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .pastilla:hover {
+            background-color: rgb(32, 83, 117);
+        }
+
+        .pastilla a:hover {
+            color: white;
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 40px;
+            padding: 20px;
+
+        }
+
+        .logo img {
+            width: 40px;
+
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .subtitulo {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .pie-enlace {
+            padding: 10px;
+
+        }
+
+        .pie-enlace a {
+            color: tomato;
+            padding-right: 10px;
+        }
+        .pie-enlace a:hover {
+            color: rgb(32, 83, 117);
+            background-color: tomato;
+            text-decoration: none;
+
+        }
+    </style>
+    <title>Geekblobg</title>
+</head>
+
+<body>
+    <!-- Esto es una cabecera -->
+    <header>
+        <div class="contenedor">
+            <p class="logo">
+                <a href=""><img src="img/brand.svg" alt="">&nbsp;Geekblobg</a>
+            </p>
+            <p class="subtitulo">Subtitle to describe your blog</p>
+        </div>
+    </header>
+    <nav>
+        <div class="contenedor">
+            <ul>
+                <li> <a href="">Development</a></li>
+                <li><a href="">Documentation</a> </li>
+                <li> <a href="">Features</a> </li>
+                <li> <a href="">Shortcodes</a></li>
+                <li> <a href="">Usage</a></li>
+                <li> <a href="">Github Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <article>
+            <h2>Getting Started</h2>
+            <p>Geekblog is a simple Hugo theme for personal blogs. It is intentionally designed as a fast and lean
+                theme and may not fit the requirements of complex projects. If a more feature-complete theme is required
+                there are a lot of got alternatives out there. This post helps you to get started with the Geekblog
+                theme,
+                including initial setup and basic configuration. </p>
+
+            <p class="read-full">
+                <a href="">Read full post &#8594; </a>
+            </p>
+
+            <p>
+                &#128197;</i>Updated on May 6, 2026 &#9201; </i> 6 min read <i class="fa-solid fa-thumbtack"></i> Pinned
+                <i class="fa-solid fa-user"></i>
+                <span class="pastilla"> <a href="">Jhon Doe</a></span>
+                <span class="pastilla"> <a href="">Sven</a></span>
+                <span class="pastilla"> <a href="">Special</a></span>
+                <i class="fa-solid fa-bookmark"></i> <span class="pastilla"> <a href="">Documentation</a></span>
+                <span class="pastilla"> <a href="">Usage</a> </span>
+
+
+            </p>
+
+        </article>
+        <article>
+            <h2>Configuration </h2>
+            <p>Overview of all available site and page configuration options provided by the theme.</p>
+            <p>
+                <a href="">Read full post
+                    gblog_arrow_right
+                </a>
+            </p>
+            <p>Updated on Nov 5, 2025 7 min Menus</p>
+        </article>
+
+    </main>
+    <footer>
+        <div class="contenedor">
+            <p class="pie-enlace">
+              <i class="fa-solid fa-square-rss"></i>  <a href="">Atom Feed</a>
+               <i class="fa-solid fa-envelope"></i> <a href="">About</a>
+                <a href="">Legal Notice</a> 
+                <a href="">Privacy Policy</a>
+            </p>
+
+            <p class="pie-enlace">
+            Built with <a href="">Hugo</a> and<i class="fa-solid fa-heart"></i>
+            </p>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
