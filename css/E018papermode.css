@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.contenedor{
+    width: 960px;
+    height: 400px;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+nav{
+    text-align: right;
+    
+}
+nav li{
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+.menu a{
+    color: black;
+}
+
+.logo{
+    font-size: 50px;
+    font-weight: 700;
+    color: black;
+    padding-top: 30px;
+    padding: bottom 30px; 
+    margin-bottom: 50px;
+}
+.subtitulo{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.introduccion{
+    margin-bottom: 30px;
+}
+
+.instrucciones li{
+    line-height: 1.5;
+
+}
+.iconos{
+
+}
+
+
+
+.pie{
+    padding-top: 50px;
+    padding: bottom 50px; 
+}
