@@ -13,6 +13,10 @@
             margin: 0;
             padding: 0;
         }
+        html{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+        }
 
         header {
             height: 100vh;
@@ -33,10 +37,18 @@
             color: white;
             padding-top: 40vh;
         }
+        .separador{
+            width: 5%;
+            margin: 15px auto;
+            border: 0;
+            border-top: 4px solid;
+            border-bottom: 12 px;
+        }
 
         h1 {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 40px;
+            text-shadow:3px 3px 2px ;
         }
     </style>
 </head>
@@ -44,10 +56,12 @@
 <body>
     <header>
         <div class="fondo-gris">
-
-            <h1>Chulapa</h1>
-            <p>A full flexible Jekyll theme for Github Pages</p>
-            <i class="fa-brands fa-github"></i>">Follow</a>
+            <div class="contenedor">
+                <h1>Chulapa</h1>
+                <hr class="separador">
+                <p>A full flexible Jekyll theme for Github Pages</p>
+                <i class="fa-brands fa-github"></i>">Follow</a>
+            </div>
         </div>
     </header>
 
