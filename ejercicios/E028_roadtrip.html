@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <title>Roadtrip</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+        footer{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #1b1b1b;
+            color:white ;
+            text-align: center;
+            padding: 2rem;
+            font-weight: lighter;
+        }
+        footer a{
+            color: red;
+            text-decoration: none;
+        }
+
+        .lobster-regular {
+            font-family: "Lobster", sans-serif;
+            font-weight: 400;
+            font-size: 6rem;
+            font-style: normal;
+            color: white;
+            text-align: center;
+
+            width: 70%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+
+        }
+
+        .portada {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url("img/muchacha.jpg");
+            background-position: center;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .fondo {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.529);
+        }
+
+        .negrita {
+            font-weight: bold;
+        }
+
+        .fijo {
+            position: fixed;
+            top: 0;
+            left: 1rem;
+            color: white;
+            z-index: 1000;
+        }
+
+        .flecha {
+            position: absolute;
+            bottom: 2rem;
+            left: 48%;
+            color: white;
+            /* border */
+            padding: 0.5rem;
+            border-radius: 2rem;
+            background-color: rgba(255, 255, 255, 0.139);
+
+        }
+
+        .flecha:hover {
+            background-color: black;
+        }
+
+        .recuadro {
+            background-color: rgba(0, 0, 0, 0.413);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 70vw;
+            height: 60vh;
+            border-radius: 0.3rem;
+            box-sizing: border-box;
+            padding: 2.3rem;
+
+        }
+
+        .titulo_recuadro {
+            font-size: 1.4rem;
+            text-transform: lowercase;
+        }
+
+        .pagina {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            overflow: hidden;
+
+        }
+
+        .img_2 {
+            background-image: url("img/banner2.jpg");
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+        }
+
+        .fecha {
+            font-size: 1.4rem;
+            text-align: center;
+            color: white;
+        }
+
+        .texto {
+            font-size: 1rem;
+            color: rgb(178, 178, 178);
+            line-height: 1.7rem;
+            margin-top: 2rem;
+            margin-bottom: 2.4rem;
+            font-weight: lighter;
+        }
+
+        .boton {
+            margin: 0 auto;
+            width: fit-content;
+            border: 2px solid white;
+            padding: 0.6rem 0.8rem;
+
+        }
+
+        boton a {
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="fijo">
+        <p><span class="negrita"> Road Trip by TEMPLATED</p>
+    </header>
+    <section class="portada">
+        <div class="fondo">
+            <h1 class="lobster-regular">This is Road Trip</h1>
+            <p class="flecha"> <a href="#pag2"></a></a><i class="fa-solid fa-angle-down"></i></p>
+        </div>
+
+    </section>
+    <section id="pag2" class= "pagina img_2">
+        <div class="recuadro">
+            <h2 class="titulo-recuadro">Nibh non lobortis mus nibh</h2>
+            <p class="fecha">01.01.2017</p>
+            <p class="texto">Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus
+                a enim platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate
+                a duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac blandit
+                praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in tincidunt tristique
+                enim arcu litora scelerisque eros suspendisse.</p>
+            <p class="boton"> <a href="">Learn More</a></p>
+        </div>
+        <div>
+            <p class="flecha"></a><i class="fa-solid fa-angle-down"></i></p> ></p>
+        </div>
+    </section>
+
+<footer>
+  <p>Site made with:  <a href="">Templated</a> Distributed by  <a href=""> ThemeWagon</a></p>  
+</footer>
+</body>
+
+</html>
