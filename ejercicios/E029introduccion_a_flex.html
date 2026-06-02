@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a flex</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .contenedor {
+            display: flex;
+            flex-direction: row;
+            /* disposicion horizontal */
+            justify-content: center;
+
+
+            border: 2px solid rgb(255, 0, 0);
+            padding: 1rem;
+            height: 100vh;
+            /* disposición vertical */
+            align-items: center;
+            gap: 1rem;
+
+
+            border: 2px solid red;
+            box-sizing: border-box;
+
+
+
+        }
+
+        div {
+            height: 200px;
+            width: 200px;
+            border: 1px solid blue;
+        }
+
+        .contenedor div {
+            height: 200px;
+            width: 200px;
+            border: 1px solid blue;
+            font-size: 3rem;
+        }
+
+        .numero {
+            display: flex;
+            /* disposición horizontal */
+            justify-content: center;
+            /* disposición vertical */
+            align-items: center;
+
+        }
+
+        div {
+            height: 200px;
+            width: 200px;
+            border: 1px solid blue;
+        }
+
+        .uno {
+            justify-content: flex-end;
+            flex-grow: 1px;
+        }
+
+        .dos {
+            flex-grow: 5px;
+
+        }
+
+        .recuadro {
+            
+        }
+    </style>
+</head>
+
+<body>
+    <section class="contenedor">
+        <div class=" numero uno">1</div>
+        <div class="numero dos">2</div>
+        <div class="numero tres">3</div>
+
+    </section>
+    <section>
+        <div class="recuadro"></div>
+    </section>
+</body>
+
+</html>

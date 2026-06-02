@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo flex de dos columnas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: blue;
+            color: white;
+            padding: 1rem;
+            font-size: 3vw;
+            text-align: center;
+
+        }
+
+        main {
+            display: flex;
+            flex-grow: 1;
+        }
+
+        aside {
+            display: flex;
+            flex-grow: 1;
+            background-color: rgb(186, 186, 216);
+            padding: 1px;
+
+        }
+
+        .contenedor {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        section {
+            flex-grow: 6;
+            padding: 20px;
+            background-color: rgb(252, 250, 253);
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav li {
+            margin-bottom: 10px;
+
+        }
+
+        nav a {
+            display: block;
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+            background-color: rgb(227, 227, 236);
+            border-radius: 5px;
+        }
+        nav a:hover{
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>Mi primer sitio con flex</h1>
+        </header>
+        <main>
+            <aside>
+                <nav>
+                    <ul>
+                        <li> <a href="">Inicio</a></li>
+                        <li> <a href="">Productos</a></li>
+                        <li> <a href="">Servicios</a></li>
+                        <li> <a href="">Contactos</a></li>
+                        <li> <a href="">Precios</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <section>
+                <h2>Contenido principal</h2>
+                <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam non nam assumenda eum
+                    similique
+                    dolorum, velit quod inventore quasi. Nemo vero quas suscipit accusamus distinctio voluptas
+                    inventore nostrum commodi dignissimos!</p>
+            </section>
+
+        </main>
+
+    </div>
+    <footer>
+        &copy;Desarrollo web 2026
+    </footer>
+
+</body>
+
+</html>
