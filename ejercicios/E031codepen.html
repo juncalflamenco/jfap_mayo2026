@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: black;
+
+
+        }
+
+        .contenedor {
+
+            width: 80vw;
+            margin: 0 auto;
+            padding-top: 7rem;
+            text-align: center;
+            color: white;
+
+        }
+
+        .cajas {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            flex-shrink: 0;
+            gap: 1.8rem;
+
+            padding: 5rem;
+        }
+
+        section {
+
+            max-width: 15rem;
+        }
+
+
+        .arriba-abajo {
+            width: 100%;
+            position: fixed;
+        
+            border: 1px solid rgb(255, 8, 0);
+        }
+
+        header {
+            
+            top: 10px;
+        
+
+        }
+
+        footer {
+           
+            bottom: 10px;
+            
+
+        }
+
+
+        .iconos {
+            font-size: 2rem;
+            padding-bottom: 1rem;
+        }
+
+        .texto {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="arriba-abajo"></header>
+    <div class="contenedor">
+
+        <h1>This is an info box</h1>
+        <div class="cajas">
+            <section>
+                <p class="iconos"><i class="fa-solid fa-star"></i></p>
+                <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt, laudantium
+                    nostrum minus
+                    fuga aut dolore fugit cupiditate qui.
+                </p>
+            </section>
+            <section>
+
+                <p class="iconos"><i class="fa-solid fa-thumbs-up"></i></p>
+                <p class="texto">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Integer posuere
+                    erat a ante
+                    venenatis dapibus posuere velit aliquet.</p>
+            </section>
+            <section>
+
+                <p class="iconos"><i class="fa-solid fa-check"></i></p>
+                <p class="texto">Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum. Nullam id dolor
+                    id nibh
+                    ultricies vehicula ut id elit.</p>
+            </section>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <footer class="arriba-abajo">
+
+    </footer>
+</body>
+
+</html>
