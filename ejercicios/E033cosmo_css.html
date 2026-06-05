@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cspablocortez/cosmocss@latest/cosmo.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        header li {
+            display: inline-block;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            border-bottom: 1px;
+
+        }
+
+        .img-central {
+            width: 400;
+            text-align: center;
+        }
+
+        .logo {
+            font: 700;
+        }
+
+        .primera {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .titulillo {
+            font-weight: 600;
+            color: red;
+            background-color: rgba(255, 0, 0, 0.197);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Hugo Classless</div>
+        <nav>
+            <ul>
+                <li><a href="">Home
+                    </a></li>
+                <li><a href="">Posts
+                    </a></li>
+                <li><a href="">Projects
+                    </a></li>
+                <li><a href="">Contact
+                    </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="primera">
+            <h1>Hugo Classless: A Theme for <br>
+                Any Classless CSS Framework</h1>
+            <img class="img-central" src="hugo.png" alt="">
+            <p>Developed by M.Ozan Unal</p>
+
+            <p><a href="">Github</a> |<a href="">Twitter</a> |<a href="">GScholar</a></p>
+          
+
+        </section>
+        <section>
+            <h2> See it in Action</h2>
+
+            <p> <a href="">View on GitHub →</a></p>
+            <p>Welcome to <strong> Hugo Classless,</strong> a theme foundation designed to be minimal, semantic, and
+                incredibly
+                flexible. Instead of locking you into one design, this theme generates pure, well-structured HTML.
+                This means you can point it to <strong> any classless CSS framework—like Pico,</strong>Water.css, or
+                Simple.css—and
+                instantly adopt its appearance</p>
+
+            <p>The best way to understand the concept is to try it yourself. Use the theme switcher in the header to
+                dynamically change the look and feel of this entire site. You can also toggle between light, dark,
+                and system mode using the icon button in the navbar. Watch how every element adapts instantly. This
+                is the power of classless CSS!</p>
+            <h2></h2>
+        </section>
+        <section>
+            <h2>Explore the Demo</h2>
+
+            <p>This site demonstrates how the theme handles common content types and features.</p>
+            <ul>
+                <li><a href="">Posts:</a> See examples of standard blog posts.</li>
+                <li><a href="">Markdown Syntax:</a>A test page showcasing how every Markdown element is rendered. </li>
+                <li><a href="">Math Typesetting:</a>A demo of the built-in KaTeX support for beautiful formulas.</li>
+                <li><a href="">Standard Pages:</a>View other content types like project and contact pages.</li>
+            </ul>
+
+        </section>
+
+        <section>
+            <h2>Get Started in 60 Seconds</h2>
+            <p>Ready to use this for your own site? It’s easy.</p>
+            <p>
+                1. <span class="titulillo">Add the theme:
+            </p>
+            <pre>
+            git submodule add \
+    https://github.com/mozanunal/hugo-classless.git \
+    themes/hugo-classless
+           </pre>
+            <p>
+                2. <span class="titulillo"> Configure hugo.yml:
+            </p>
+            <pre>
+ theme: "hugo-classless"   
+</pre>
+            <pre>
+params:
+</pre>
+            <pre>
+     # Single theme with dark mode support: 
+</pre>
+            <pre>
+   themeBase: "css/base.css"
+  themeLight: "css/light.css"
+  themeDark: "css/dark.css"  
+</pre>
+        </section>
+        <p>For full documentation and more configuration options, check out the project on GitHub.</p>
+    </main>
+
+
+    <footer>
+        &copy;2026 Jhon Doe
+    </footer>
+</body>
+
+</html>
