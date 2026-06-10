@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Masonry */
+.masonry {
+    columns: 4 250px;
+    column-gap: 16px;
+}
+
+.card {
+    break-inside: avoid;
+    margin-bottom: 16px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    line-height: 1.5;
+    color: #555;
+}
+</style>
+
+
+
+
+<body>
+ <h1>Masonry Layout (tipo Pinterest)</h1>
+
+<div class="masonry">
+
+    <div class="card">
+        <img src="https://picsum.photos/400/300?1">
+        <div class="card-content">
+            <h3>Tarjeta 1</h3>
+            <p>Texto corto.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/400/500?2">
+        <div class="card-content">
+            <h3>Tarjeta 2</h3>
+            <p>
+                Esta tarjeta tiene más contenido para aumentar
+                considerablemente su altura y demostrar cómo
+                funciona el efecto Masonry.
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/400/250?3">
+        <div class="card-content">
+            <h3>Tarjeta 3</h3>
+            <p>Texto medio.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/400/600?4">
+        <div class="card-content">
+            <h3>Tarjeta 4</h3>
+            <p>
+                Otra tarjeta con bastante contenido para crear
+                una altura diferente y observar cómo se rellenan
+                las columnas automáticamente.
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/400/350?5">
+        <div class="card-content">
+            <h3>Tarjeta 5</h3>
+            <p>Contenido corto.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/400/450?6">
+        <div class="card-content">
+            <h3>Tarjeta 6</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Quisquam, ratione.
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/400/280?7">
+        <div class="card-content">
+            <h3>Tarjeta 7</h3>
+            <p>Texto breve.</p>
+        </div>
+    </div>
+
+</div>   
+</body>
+</html>
