@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gridymediaquerie</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: antiquewhite;
+            padding: 20px;
+
+        }
+
+        .contenedor {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+
+
+            grid-template-areas:
+                "header header"
+                "menu content"
+                " ads content"
+                "footer footer";
+                gap: 20px;
+                max-width: 1200px;
+                margin: auto;
+        }
+        .header{
+            grid-area: header;
+            background-color: aqua;
+        }
+        .menu{
+            grid-area: menu;
+            background-color: azure;
+        }
+        .content{
+            grid-area: content;
+            background-color: brown;
+
+        }
+        .ads{
+            grid-area: ads;
+            background-color: cadetblue;
+
+        }
+        .footer{
+            grid-area: footer;
+            background-color: green;
+        }
+        .box{
+            color: rgb(179, 143, 143);
+            padding: 40px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 10px;
+        }
+        /* Tablet */
+        @media (max-width:900px){
+            .contenedor{
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                "header"
+                "menu"
+                "content"
+                "ads"
+                "footer"
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">Header</div>
+    <header class="header box">Menú</header>
+    <nav class="menu box">Contenido</nav>
+    <main class="content box">Publicidad</main>
+    <footer class="footer box">Pie</footer>
+</body>
+
+</html>

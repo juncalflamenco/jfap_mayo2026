@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario del viajero</title>
+    <style>
+      * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        body{
+            background-color: #f3e7d3;
+        }
+
+        header{
+            text-align: center;
+            padding:2rem;
+            border-bottom: 2px solid #5a4633;
+            color: #5a4633;
+        }
+        h1{
+            font-size: 2.5rem;
+            padding-bottom: 0.5rem;
+            
+        }
+        header p{
+            font-style: italic;
+            font-size: 1.3rem;
+        }
+        footer{
+            text-align:center;
+            padding:15px;
+        }
+        footer p{
+            font-size: 1.2rem;
+            color:rgb(101, 101, 101);
+
+        }
+        .contenedor {
+            width: 900px;
+            border: 6px double #5a4633;
+            background-color: #f8f1e3;
+            margin: 0 auto;
+            padding:20px;
+        }
+        .dias-semana{
+            display: grid;
+            grid-template-columns: repeat(7,1fr);
+            font-size: 1.3rem;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #5a4633; 
+            color: #5a4633;
+                      
+        }
+        .dias-semana div{
+            padding: 10px 0;
+        }
+
+        .mes {
+            display:grid;
+            grid-template-columns: repeat(7,1fr);
+            grid-auto-rows: 100px;
+            gap:6px;
+            
+        }
+        .dia{
+            border: 1px solid #5a4633;
+            border-radius: 8px; 
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        .dia:hover{
+            background-color: rgb(243, 176, 106);
+        }
+        .domingo{
+            background-color: tomato;
+            color:white;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>Octubre 1987</h1>
+            <p>Registro de observaciones del viajero</p>
+        </header>
+
+        <div class="dias-semana">
+            <div>Lunes</div>
+            <div>Martes</div>
+            <div>Miércoles</div>
+            <div>Jueves</div>
+            <div>Viernes</div>
+            <div>Sábado</div>
+            <div>Domingo</div>
+        </div>
+
+
+        <div class="mes">
+            <div></div>
+
+            <div class="dia">1</div> <!-- Martes -->
+            <div class="dia">2</div>
+            <div class="dia">3</div>
+            <div class="dia">4</div>
+            <div class="dia">5</div>
+            <div class="dia domingo">6</div>
+
+            <div class="dia">7</div>
+            <div class="dia">8</div>
+            <div class="dia">9</div>
+            <div class="dia">10</div>
+            <div class="dia">11</div>
+            <div class="dia">12</div>
+            <div class="dia domingo">13</div>
+
+            <div class="dia">14</div>
+            <div class="dia">15</div>
+            <div class="dia">16</div>
+            <div class="dia">17</div>
+            <div class="dia">18</div>
+            <div class="dia">19</div>
+            <div class="dia domingo">20</div>
+
+            <div class="dia">21</div>
+            <div class="dia">22</div>
+            <div class="dia">23</div>
+            <div class="dia">24</div>
+            <div class="dia">25</div>
+            <div class="dia">26</div>
+            <div class="dia domingo">27</div>
+
+            <div class="dia">28</div>
+            <div class="dia">29</div>
+            <div class="dia">30</div>
+            <div class="dia">31</div>
+
+        </div>
+    </div>
+    <footer>
+        <p>“El tiempo se escribe a mano en los márgenes del mundo.”</p>
+    </footer>
+
+
+</body>
+
+</html>
