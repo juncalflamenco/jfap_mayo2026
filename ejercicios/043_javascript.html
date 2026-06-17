@@ -42,26 +42,101 @@
     const IVA = 0.21;
     let precio = 100;
     let total = precio + precio * IVA;
-    let total = precio * ( 1+ IVA);
-    
+    let total = precio * (1 + IVA);
+
+    // -------
+    let anio = 2026
+
 
 </script>
 
 <body>
     <button onclick="console.log( 'Estudiante: ' + estudiante);
    console.log( 'Materia: ' +asignatura)
-   console.log( 'Calificación: ' + nota)";>
+   console.log( 'Calificación: ' + nota)" ;>
         datos del estudiante
 
     </button>
     <button onclick="console.log('Area: ' + cuadrado);">
-     Area del Cuadrado  
+        Area del Cuadrado
     </button>
 
     <button onclick="console.log(total);">
         IVA
     </button>
+    <button onclick="let edad = ('Dime tu edad', 33);alert('tu edad es ' + edad);
+    ">
+        Pregunta
+    </button>
+    <button onclick="
+    let acuerdo = confirm('¿Está de acuerdo?'); 
+    alert(acuerdo)">
+        Confirm
 
+    </button>
+
+    <br> <br>
+    Comparacion:
+    <ul>
+        <li>Mayor que A > B</li>
+        <li> Menor que A > B</li>
+        <li>Igualdad A == B</li>
+        <li>Igualdad estricta A === B</li>
+    </ul>
+
+    <button onclick="alert(10==10)">
+        Mayor
+
+    </button>
+
+    <button onclick="
+let ahora = prompt('Dime el año actual',2026);
+if(anio == ahora)
+
+alert('el año es correcto')">
+        IF
+
+    </button>
+
+    <button onclick="
+                  for(let i = 0; i < 10; i++){
+                    console.log('i: '+ i);
+               }">
+        Bucles FOR decreciente
+        <button onclick="
+ for(let i = 100; i < 0; i -= 2){
+    console.log( 'i: + i');
+ }
+ ">
+            Pares 0-100
+        </button>
+
+        <button onclick="
+        let contador = 0;
+        while(contador <100){
+            console.log('Contador:' + contador);
+            contador += 2;
+        }
+        
+        ">
+            Bucles while
+
+        </button>
+        <hr>
+        <h2> Ejercicios</h2>
+        <h4>1. Pedir un número al usuario y decir si es positivo o negativo</h4>
+
+        <button onclick="
+                       let numero = prompt ('Dime un numerito', 0);
+                       if(numero >0);{
+                       alert('El numero '+ numero + 'es positivo');
+                       }
+                       else{
+                       alert('el numero' + numero +'es negativo');
+                       }
+                       ">
+        mayor o menor
+        </button>
 </body>
 
 </html>
