@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones en javascript</title>
+    <script>
+        function saludo() {
+            alert('holaaaaa');
+        }
+
+        function saludame() {
+            let nombre = prompt("dime quién eres");
+            alert("hola" + nombre);
+        }
+
+        function saludo_parami(nombre, edad) {
+            alert("hola " + nombre + ' , tienes ' + edad + 'años.');
+        }
+        function sumar(a,b){
+            return a + b; 
+        }
+        
+    </script>
+</head>
+
+<body>
+    <button onclick="saludo()">
+        saludo
+    </button>
+    <button onclick="saludame()">
+
+        Saludame
+    </button>
+    <button onclick="saludo_parami('Daniela', 33)">
+        saludo con parámetros
+
+    </button>
+    <button onclick=" sumar(3, 2)">
+        suma 3 + 2
+    </button>
+</body>
+
+</html>
