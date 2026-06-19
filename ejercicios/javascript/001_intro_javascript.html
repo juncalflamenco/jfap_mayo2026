@@ -79,7 +79,7 @@
     Comparacion:
     <ul>
         <li>Mayor que A > B</li>
-        <li> Menor que A > B</li>
+        <li>Menor que A > B</li>
         <li>Igualdad A == B</li>
         <li>Igualdad estricta A === B</li>
     </ul>
@@ -97,17 +97,18 @@ alert('el año es correcto')">
         IF
 
     </button>
-
+    Bucles for
     <button onclick="
                   for(let i = 0; i < 10; i++){
                     console.log('i: '+ i);
                }">
+
         Bucles FOR decreciente
         <button onclick="
- for(let i = 100; i < 0; i -= 2){
-    console.log( 'i: + i');
- }
- ">
+        for(let i = 0; i < 100; i -= 2){
+       console.log( 'i: + i');
+       }
+       ">
             Pares 0-100
         </button>
 
@@ -119,7 +120,6 @@ alert('el año es correcto')">
         }
         
         ">
-
             Bucles while
 
         </button>
@@ -173,10 +173,10 @@ alert('el año es correcto')">
 
         </button>
 
-  //   const OBJETIVO = 4;
-                          let numeroCandidatoParaProbarLacosa  // camel case
-                          let numero_candidato_para_probar  // snake case 
-                          let NumeroCandidatoPara           // pascal case //
+        // const OBJETIVO = 4;
+        let numeroCandidatoParaProbarLacosa // camel case
+        let numero_candidato_para_probar // snake case
+        let NumeroCandidatoPara // pascal case //
 
 
         <h4> 3. Adivina el número. Dado un número, intentar adivinarlo en 5 intentos</h4>
@@ -187,7 +187,7 @@ alert('el año es correcto')">
                          let intentos = 1;
 
                         let numero_candidato = prompt ('¿Cual es el numerito');
-                while( !acierto && intentos < LIMITE ){
+                while(! acierto && intentos <= LIMITE ){
                         if(numero_candidato == OBJETIVO){
                             acierto = true;
                         alert('¡¡¡Enhorabuena!!!has acertado');
@@ -200,6 +200,18 @@ alert('el año es correcto')">
                 alert('Fin de la partida');
  ">
             Adivina el número
+        </button>
+        <h4> Clacular la suma de los numeros enteros entre 1 y 100</h4>
+
+        <button onclick="
+         let suma = 0; 
+         for (let i = 1; i<= 100; i++){
+              //suma = suma +1;
+              suma +=1;
+               }
+               alert('la suma es' + suma)
+        ">
+
         </button>
 
 </body>
