@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+ @font-face{
+            font-family:"seven" ;
+            src: url("fuentes/fs-sevegment.otf.woff2") format("woff2");
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        html{
+            font-family: monospace;
+        }
+        body{
+            background-color: rgb(219, 200, 174);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contenedor{
+            width: 900px;
+            border: 10px solid black;
+            border-radius: 9px;
+            background: color #d8decd;
+            padding: 25px;
+        }
+        .arriba{
+            display: grid;
+            grid-template-columns: 80px 1fr 80px;
+            align-items: center;
+        }
+        .mna{
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+
+        }
+        .hora-min{
+            display: grid;
+            grid-template-columns: auto 0.55em auto;
+            justify-content: center;
+            align-items: center;
+
+            font-family: "seven",monospace;
+            font-size: 150px;
+
+        }
+        #segundos{
+            font-family: "seven",monospace;
+            font-size: 60px;
+        }
+        .linea{
+            height: 3px;
+            background-color: black;
+            margin: 20px 0;
+        }
+        .abajo{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .celda{
+            text-align: center;
+            border-right: 2px solid black;
+        }
+        .celda:last-child{
+            border-right: none;
+        }
+        .etiqueta{
+            font-size: 24px;
+            margin-bottom: auto;
+        }
+        .valor{
+            font-family: "seven",monospace;
+            width: 60px;
+        
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="arriba">
+            <div class="mna" id="ampm">AM</div>
+            <div class="hora-min" id="reloj">
+                <span id="horas">00</span>
+                <span id="puntos">:</span>
+                <span id="minutos">00</span>
+            </div>
+            <div class="segs" id="segundos">00</div>
+        </div>
+
+        <div class="linea"></div>
+
+        <div class="abajo">
+            <div class="celda">
+                <div class="etiqueta">DÍA</div>
+                <div id="diasem" class="31">31</div>
+            </div>
+            <div class="celda">
+                <div class="etiqueta">MES</div>
+                <div id="mes" class="12">12</div>
+            </div>
+            <div class="celda">
+                <div class="etiqueta">DÍA SEM.</div>
+                <div id="diasem" class="Jueves">Jueves</div>
+            </div>                        
+        </div>
+    </div>
+
+    
+   <script>
+        let manejador;
+
+        function muestra_hora() {
+            let fecha = new Date();
+
+            // let reloj = document.getElementById('reloj');
+            // reloj.innerHTML = fecha;
+
+            let horas = fecha.getHours();
+            let minutos = fecha.getMinutes();
+            let segundos = fecha.getSeconds();
+            let span_diames = fecha.getDate();
+
+            if(horas>=12){
+                doument.getElementById('ampm') , textContent= 'PM';
+                 }
+            else{
+                 doument.getElementById('ampm') , textContent= 'AM';
+                 }
+
+            let span_horas = document.getElementById('horas');
+            let span_minutos = document.getElementById('minutos');
+            let span_segundos = document.getElementById('segundos');
+
+            span_horas.innerHTML = horas.toString().padStart(2,'0');
+            span_minutos.innerHTML= minutos.toString().padStart(2,'0');
+            span_segundos.innerHTML =segundos.toString().padStart(2,'0');
+            
+
+            
+        }
+
+       
+            muestra_hora();
+            manejador = setInterval(muestra_hora,1000);
+        
+    </script>
+</body>  
+
+</html>
