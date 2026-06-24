@@ -120,41 +120,59 @@
     
    <script>
         let manejador;
+        let mostrar = true;
 
         function muestra_hora() {
+            let anio = ["ENE","FEB","MAR","ABR","MAY","JUN","JUL","AGO","SEP","OCT","NOV","DIC"];
+            let semana = ["DOM","LUN","MAR","MIÉ","JUE","VIE","SAB"];
             let fecha = new Date();
-
             // let reloj = document.getElementById('reloj');
             // reloj.innerHTML = fecha;
-
             let horas = fecha.getHours();
             let minutos = fecha.getMinutes();
             let segundos = fecha.getSeconds();
-            let span_diames = fecha.getDate();
+            let dia_mes= fecha.getDate();
+            let mes = fecha.getMonth();
+            let dia_semana = fecha.getDay();
 
             if(horas>=12){
-                doument.getElementById('ampm') , textContent= 'PM';
-                 }
+                document.getElementById('ampm').textContent='PM';
+            }
             else{
-                 doument.getElementById('ampm') , textContent= 'AM';
-                 }
+                document.getElementById('ampm').textContent='AM';
+            }
 
             let span_horas = document.getElementById('horas');
             let span_minutos = document.getElementById('minutos');
             let span_segundos = document.getElementById('segundos');
+            let span_diames = document.getElementById('diames');
+            let span_mes = document.getElementById('mes');
+            let span_dia_semana = document.getElementById('diasem');
 
-            span_horas.innerHTML = horas.toString().padStart(2,'0');
-            span_minutos.innerHTML= minutos.toString().padStart(2,'0');
-            span_segundos.innerHTML =segundos.toString().padStart(2,'0');
+            span_horas.innerHTML = horas.toString().padStart(2, '0');
+            span_minutos.innerHTML = minutos.toString().padStart(2, '0');
+            span_segundos.innerHTML = segundos.toString().padStart(2, '0');
+            span_diames.innerHTML = dia_mes.toString().padStart(2, '0');
+            span_mes.innerHTML = anio[mes];
+            span_dia_semana.innerHTML = semana[dia_semana];
+
+           
+
+            mostrar = !mostrar;
+            if(mostrar == true){
+                document.getElementById("puntos").style.visibility = "visible";
+            }
+            else{
+                document.getElementById("puntos").style.visibility = "hidden";
+            }
             
 
-            
+
         }
 
-       
-            muestra_hora();
-            manejador = setInterval(muestra_hora,1000);
-        
+        muestra_hora();
+        manejador = setInterval(muestra_hora, 1000);
+  
     </script>
 </body>  
 

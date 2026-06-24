@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tareas</title>
+    <style>
+        .tachado {
+            text-decoration: line-through;
+
+        }
+    </style>
+</head>
+<body>
+  <div class="app">
+    <h1>Mi lista de tareas</h1>
+    <input type="text" name ="" id ="nueva_tarea" placeholder="Nueva tarea">
+    <button onclick="crear_tarea()">Crear</button>
+
+
+    <ul id="tareas"></ul>
+  </div>
+  <script>
+    function crear_tarea(){
+        const input = document.getElementById("nueva_tarea");
+        const texto = input.value;
+
+        const li = document.createElement('li');
+        const check = document.createElement('input');
+        check.type = "checkbox";
+        check.onclick = function(){alternar(this);}
+        // poner click
+
+
+        const span = document.createElement('span')
+        span.innerHTML = texto; 
+        span.onclick = function() {editar_tarea(this);}
+
+        // poner click
+
+
+        const boton = document.createElement('button');
+        boton.innerHTML = "Borrar";
+        boton.onclick = function(){borrar_tareas(this);}
+        // 
+
+
+        li.appendChild(check);
+        li.appendChild(span);
+        li.appendChild(boton);
+
+        const lista = document.getElementById("tareas");
+        lista.appendChild(li);
+        input.value = "";
+    }
+    function borrar_tareas(boton){
+        const li = boton.parentNode;
+        li.parentNode.removeChild(li);
+    
+    }
+    function alternar(casilla){
+      const li = casilla.parentNode;
+      if(casilla.checked){
+        li.className = "tachado"
+      }
+      else{
+        li.className = "";
+      }
+
+    }
+    function editar_tareas(span){
+        const texto_actual = span.innerHTML;
+        const input = document.createElement('input');
+        input.type = "text";
+        input.value = texto=actual;
+        input.onblur = function (){
+
+        if (input.vale === ''){
+            span.innerHTML = texto_actual;
+        }
+        else{
+            span.innerHTML = input.value;
+        }
+        input.parentNode.replaceChild(span,input);
+        
+        };
+        span.parentNode.replaceChild()
+
+        }
+ 
+
+
+    
+
+  </script>
+</body>
+</html>
