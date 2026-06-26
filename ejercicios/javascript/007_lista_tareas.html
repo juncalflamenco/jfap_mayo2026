@@ -1,198 +1,153 @@
-<!DOCTYPE html>
+
+  <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de tareas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú hamburguesa</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: rgb(241, 243, 243);
+            color:rgb(0, 0, 0);
+            line-height: 1.6;
+        }
+        header{
+            background-color: rgb(17, 17, 90);
+            color:white;
+            position:relative;
+        }
+        nav{
+            max-width: 1000px;
+            margin:auto;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:15px;
+            
+        }
+        .logo{
+            font-size: 42px;
+            font-weight: bold;
+        }
 
+        /* Menú */
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
+        #menu{
+            list-style: none;
+            display:flex;
+            gap:25px;
+        }
 
+        #menu a{
+            text-decoration: none;
+            color:white;
+        }
 
-    }
+        #menu a:hover{
+            color: #60a5fa;
+        }
 
+        /* Botón hamburguesa */
 
+        #hamburguesa{
+            display:none;
+            font-size:28px;
+            background: none;
+            border:none;
+            color:white;
+            cursor:pointer;
 
+        }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      /* align-items: center; */
-      justify-content: center;
-      padding-top: 20vh;
-      background-color: beige;
-    }
+        /* Menú en móviles */
 
-    ul {
-      margin-top: 1rem;
-    }
+        @media (max-width:700px){
+             #hamburguesa{
+                display:block;
+             }
 
-    li {
-      display: grid;
-      align-items: center;
-      grid-template-columns: 1rem 1fr auto;
-      gap: 10px;
+             #menu{
+                display:none;
+                position: absolute;
+                top:100%;
+                left:0;
 
-      list-style: none;
-      color: blue;
-      line-height: 1.8;
-    }
+                width:100%;
+                background-color: #374151;
+                flex-direction: column;
 
-    li button {
-      padding: 3px;
-      height: fit-content;
-    }
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 
-    li.tachado span {
-      text-decoration: line-through;
-      color: gray;
-    }
+             }
 
-    .app {
-      min-height: 40vh;
-      min-width: 40vw;
-      border: 2px solid black;
-      border-radius: 10px;
-      padding: 20px;
-      background-color: tomato;
+             #menu li{
+                margin:0;
+                border-top: 1px solid black;
+             }
+             #menu a{
+                display:block;
+                padding:15px;
+             }
 
-    }
+        }
 
-    h1 {
-      text-align: center;
-      padding: 1rem;
-    }
-
-    .editor {
-      border-bottom: 1px solid gray;
-      padding: 0 20 px;
-      display: flex;
-      gap: 5px;
-    }
-
-    .editor input, li  input{
-      color: red;
-      font-size: 1.3rem;
-      flex-grow: 3;
-    }
-
-    .editor button {
-      font-size: 1.3rem;
-      flex-grow: 1;
-    }
-
-     /* https://desarrolloweb.com/articulos/estilos-css-campos-checkbox */
-
-    .mycheck2 {
-      cursor: pointer;
-      background-color: #fff;
-      color: #fff;
-      background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
-      width: 24px;
-      height: 24px;
-      appearance: none;
-      border: 2px solid #888;
-      background-position: 0 -2rem;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .mycheck2:checked {
-      background-color: rgb(75, 156, 13);
-      color: rgb(75, 156, 13);
-      background-position: 0 0;
-    }    
- 
-  </style>
-
+    </style>
 </head>
-
 <body>
-  <div class="app">
-    <h1>Mi lista de tareas</h1>
-    <div class="editor">
-      <input type="text" name="" id="nueva_tarea" placeholder="Nueva tarea">
-      <button onclick="crear_tarea()">Crear</button>
+    <header>
+        <nav>
+            <div class="logo">Mi Logo</div>
+            <button id="hamburguesa">&#9776;</button>
+            <ul id="menu">
+                <li><a href="">Archivo</a></li>
+                <li><a href="">Editar</a></li>
+                <li><a href="">Selección</a></li>
+                <li><a href="">Ver</a></li>
+                <li><a href="">Ayuda</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div>
+        <a href="mailto:fulanito@gmail.com"> Mándame un mensaje</a>
     </div>
 
-    <ul id="tareas"></ul>
+<script>
+    const boton = document.getElementById("hamburguesa");
+    const menu = document.getElementById("menu");
 
+    boton.addEventListener("click",cambia_menu);
+    window.addEventListener("resize",restaura_menu);
 
-    <script>
-      function crear_tarea() {
-        const input = document.getElementById("nueva_tarea");
-        const texto = input.value;
-
-        const li = document.createElement('li');
-        const check = document.createElement('input');
-        check.type = "checkbox";
-        check.className = "mycheck2";
-        check.onclick = function () { alternar(this); }
-
-        const span = document.createElement('span');
-        span.innerHTML = texto;
-        span.onclick = function () { editar_tarea(this); }
-
-        const boton = document.createElement('button');
-        boton.innerHTML = "Borrar";
-        boton.onclick = function () { borrar_tarea(this); }
-
-        li.appendChild(check);
-        li.appendChild(span);
-        li.appendChild(boton);
-
-        const lista = document.getElementById("tareas");
-        lista.appendChild(li);
-
-        input.value = "";
-
-      }
-      function borrar_tarea(boton) {
-        const li = boton.parentNode;
-        li.parentNode.removeChild(li);
-
-      }
-      function alternar(casilla) {
-        const li = casilla.parentNode;
-        if (casilla.checked) {
-          li.className = "tachado";
+    function cambia_menu(){
+        if(menu.style.display == "flex"){
+            menu.style.display = "none";
         }
-        else {
-          li.className = "";
+        else{
+            menu.style.display = "flex";
+            menu.style.flexDirection = "column";
         }
-      }
 
-      function editar_tarea(span) {
-        const texto_actual = span.innerHTML;
-        const input = document.createElement('input');
-        input.type = "text";
-        input.value = texto_actual;
+    }
 
-        input.onblur = function () {
-          if (input.value === '') {
-            span.innerHTML = texto_actual;
-          }
-          else {
-            span.innerHTML = input.value;
-          }
-          input.parentNode.replaceChild(span, input);
+    function restaura_menu(){
+        if(window.innerWidth > 700){
+            menu.style.display = "flex";
+            menu.style.flexDirection = "row";
+        }
+        else{
+            menu.style.display = "none";
+        }
+    }
 
-        };
-        span.parentNode.replaceChild(input, span);
-        input.focus();
+    restaura_menu();
 
-      }
-    </script>
-
-
-
-
-
+</script>
 </body>
-
 </html>
