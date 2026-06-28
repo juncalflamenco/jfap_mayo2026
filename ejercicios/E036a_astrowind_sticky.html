@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroWind Clone - CSS Grid</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6d28d9;
+            --blue: #2563eb;
+            --text: #111827;
+            --text-light: #6b7280;
+            --border: #e5e7eb;
+            --bg-soft: #faf5ff;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: white;
+        }
+
+        /* ----------------------------
+           BANDA SUPERIOR
+        ----------------------------- */
+
+        .topbar {
+            background: black;
+            color: white;
+            padding: .7rem 2rem;
+
+            display: flex;
+            justify-content: space-between;
+
+            font-size: .85rem;
+        }
+
+        /* ----------------------------
+           CONTENEDOR GENERAL
+        ----------------------------- */
+
+        .page {
+            display: grid;
+            grid-template-columns:
+                minmax(20px, 1fr) minmax(0, 1200px) minmax(20px, 1fr);
+
+            grid-template-areas:
+                ". contenido .";
+        }
+
+        /* ----------------------------
+           GRID GLOBAL DE 12 COLUMNAS
+        ----------------------------- */
+
+        .contenido {
+            grid-area: contenido;
+
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+
+        /* ----------------------------
+           COLUMNAS
+        ----------------------------- */
+
+        .col-12 {
+            grid-column: span 12;
+        }
+
+        .col-8 {
+            grid-column: span 8;
+        }
+
+        .col-6 {
+            grid-column: span 6;
+        }
+
+        .col-4 {
+            grid-column: span 4;
+        }
+
+        .col-3 {
+            grid-column: span 3;
+        }
+
+        /* ----------------------------
+           HEADER STICKY
+        ----------------------------- */
+
+        .header {
+            grid-column: span 12;
+
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+
+            background: white;
+            z-index: 1000;
+
+            min-height: 80px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            grid-column: span 3;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .menu {
+            grid-column: span 6;
+            text-align: center;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: var(--text);
+            margin: 0 .75rem;
+            font-weight: 600;
+        }
+
+        .menu a:hover {
+            color: var(--primary);
+        }
+
+        .actions {
+            grid-column: span 3;
+            text-align: right;
+        }
+
+        .btn {
+            border: none;
+            background: black;
+            color: white;
+
+            padding: .8rem 1.4rem;
+            border-radius: 999px;
+
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        /* ----------------------------
+           HERO
+        ----------------------------- */
+
+        .about {
+            grid-column: span 12;
+
+            margin-top: 4rem;
+
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--blue);
+        }
+
+        .hero-title {
+            grid-column: 2 / span 10;
+
+            text-align: center;
+
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            line-height: 1;
+            font-weight: 800;
+        }
+
+        .highlight {
+            color: var(--primary);
+        }
+
+        .hero-text {
+            grid-column: 3 / span 8;
+
+            text-align: center;
+            color: var(--text-light);
+
+            font-size: 1.15rem;
+        }
+
+        .hero-image {
+            grid-column: 2 / span 10;
+
+            width: 100%;
+            display: block;
+
+            border-radius: 18px;
+        }
+
+        /* ----------------------------
+           TÍTULOS DE SECCIÓN
+        ----------------------------- */
+
+        .section-title {
+            grid-column: span 12;
+
+            text-align: center;
+
+            margin-top: 5rem;
+            font-size: 2rem;
+        }
+
+        .section-text {
+            grid-column: 3 / span 8;
+
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        /* ----------------------------
+           STATS
+        ----------------------------- */
+
+        .stat {
+            /* background: var(--bg-soft); 
+
+            border-radius: 16px;*/
+
+            padding: 2rem;
+
+            text-align: center;
+
+        }
+
+        .borde {
+            border-right: 1px solid var(--border);
+        }
+
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 800;
+
+            color: var(--blue);
+
+        }
+        /* ----------------------------
+           OUR TEMPLATES
+        ----------------------------- */
+
+
+        /* ----------------------------
+           FOTO
+        ----------------------------- */
+
+        .foto{
+            width:100%;
+            border-radius: 9px;
+        }
+        /* ----------------------------
+           TEAM CARDS
+        ----------------------------- */
+
+        .card {
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            background: white;
+        }
+
+        .card img {
+            width: 100%;
+            display: block;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .card-content h3 {
+            margin-bottom: .5rem;
+        }
+
+        .card-content p {
+            color: var(--text-light);
+        }
+
+        /* ----------------------------
+           FOOTER
+        ----------------------------- */
+
+        .footer {
+            grid-column: span 12;
+
+            text-align: center;
+
+            margin: 5rem 0 3rem;
+            padding-top: 2rem;
+
+            border-top: 1px solid var(--border);
+
+            color: var(--text-light);
+        }
+
+        /* ----------------------------
+           RESPONSIVE
+        ----------------------------- */
+
+        @media (max-width: 768px) {
+
+            .contenido {
+                gap: 16px;
+            }
+
+            .col-12,
+            .col-8,
+            .col-6,
+            .col-4,
+            .col-3,
+            .hero-title,
+            .hero-text,
+            .hero-image {
+                grid-column: span 12;
+            }
+
+            .header {
+                position: static;
+            }
+
+            .logo,
+            .menu,
+            .actions {
+                grid-column: span 12;
+                text-align: center;
+            }
+
+            .menu a {
+                display: inline-block;
+                margin: .4rem;
+            }
+
+            .topbar {
+                flex-direction: column;
+                gap: .5rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topbar">
+        <span>NEW Astro v6 is now available! »</span>
+        <span>Github ★ 5.7K</span>
+    </div>
+
+    <div class="page">
+
+        <main class="contenido">
+
+            <!-- HEADER STICKY -->
+
+            <header class="header">
+
+                <div class="logo">
+                    🚀 AstroWind
+                </div>
+
+                <nav class="menu">
+                    <a href="#">Homes</a>
+                    <a href="#">Pages</a>
+                    <a href="#">Landing</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Widgets</a>
+                </nav>
+
+                <div class="actions">
+                    <button class="btn">Download</button>
+                </div>
+
+            </header>
+
+            <!-- HERO -->
+
+            <p class="about">
+                About us
+            </p>
+
+            <h1 class="hero-title">
+                Elevate your online presence with our
+                <span class="highlight">
+                    Beautiful Website Templates
+                </span>
+            </h1>
+
+            <p class="hero-text">
+                Donec efficitur, ipsum quis congue luctus, mauris magna convallis
+                mauris, eu auctor nisi lectus non augue. Donec quis lorem non massa
+                vulputate efficitur ac at turpis.
+            </p>
+
+            <img class="hero-image" src="https://picsum.photos/1200/650?random=1" alt="Hero image">
+
+            <!-- ESTADÍSTICAS -->
+
+            <h2 class="section-title">
+                Statistics about us
+            </h2>
+
+            <p class="section-text">
+                Numbers that reflect our growth and commitment.
+            </p>
+
+            <div class="stat col-3 borde">
+                <div class="stat-number">4</div>
+                <div>Offices</div>
+            </div>
+
+            <div class="stat col-3 borde">
+                <div class="stat-number">248</div>
+                <div>Employees</div>
+            </div>
+
+            <div class="stat col-3 borde">
+                <div class="stat-number">12</div>
+                <div>Templates</div>
+            </div>
+
+            <div class="stat col-3">
+                <div class="stat-number">24</div>
+                <div>Awards</div>
+            </div>
+
+            <!-- TEMPLATES -->
+            <h2 class="section-title">Our templates</h2>
+
+            <p class="section-title">
+                Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut
+                enim. Praesent lacinia diam et ante imperdiet euismod.
+            </p>
+
+            <div class="col-4">Educational
+                <p>Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim
+                    a, molestie vel nulla.</p>
+            </div>
+            <div class="col-4">Interior design
+                <p>Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim
+                    a, molestie vel nulla.</p>
+            </div>
+            <div class="col-4">Photography
+                <p>Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim
+                    a,molestie vel nulla.</p>
+            </div>
+
+            <!-- FOTO -->
+             <div class="col-12">
+                <img class="foto" src="https://picsum.photos/1200/400" alt="">
+             </div>
+            <div class="col-4">Educational
+                <p>Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim
+                    a, molestie vel nulla.</p>
+            </div>
+            <div class="col-4">Interior design
+                <p>Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim
+                    a, molestie vel nulla.</p>
+            </div>
+            <div class="col-4">Photography
+                <p>Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim
+                    a,molestie vel nulla.</p>
+            </div>
+            <div class="col-4">Educational
+                <p>Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim
+                    a, molestie vel nulla.</p>
+            </div>
+            <div class="col-4">Interior design
+                <p>Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim
+                    a, molestie vel nulla.</p>
+            </div>
+            <div class="col-4">Photography
+                <p>Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim
+                    a,molestie vel nulla.</p>
+            </div>
+           <!-- /FIN TEMPLAES -->
+
+           <!-- OUR VALUES -->
+            <div class="col-6">
+                <h2> Our values</h2>
+                <p>Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim
+                    a,molestie vel nulla.</p>                
+            </div>
+            <div class="col-6">
+                <h2> Our values</h2>
+                <p>Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim
+                    a,molestie vel nulla.</p>                
+            </div>
+
+            
+            <!-- EQUIPO -->
+
+            <h2 class="section-title">
+                Meet our team
+            </h2>
+
+            <p class="section-text">
+                Passionate people building exceptional digital experiences.
+            </p>
+
+            <article class="card col-4">
+                <img src="https://picsum.photos/500/350?random=10" alt="">
+                <div class="card-content">
+                    <h3>Sarah Johnson</h3>
+                    <p>CEO & Founder</p>
+                </div>
+            </article>
+
+            <article class="card col-4">
+                <img src="https://picsum.photos/500/350?random=20" alt="">
+                <div class="card-content">
+                    <h3>Michael Brown</h3>
+                    <p>Lead Designer</p>
+                </div>
+            </article>
+
+            <article class="card col-4">
+                <img src="https://picsum.photos/500/350?random=30" alt="">
+                <div class="card-content">
+                    <h3>Emma Wilson</h3>
+                    <p>Senior Developer</p>
+                </div>
+            </article>
+
+            <!-- FOOTER -->
+
+            <footer class="footer">
+                © 2026 AstroWind Clone · Construido con un único grid CSS de 12 columnas.
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
