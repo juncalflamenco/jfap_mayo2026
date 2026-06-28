@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes en HTML</title>
+</head>
+
+<body>
+    <hr>
+    <a href="">Uno</a> |
+    <a href="">Dos</a> |
+    <a href="">Tres</a> |
+    <a href="">Cuatro</a>
+    <hr>
+    <header>
+    <small>Lorem</small> ipsum dolor sit amet, consectetur adipisicing elit. Illum assumenda dolorum, perferendis est maiores aut architecto deleniti provident numquam voluptate quis? Non modi molestias ad veritatis. Iste beatae necessitatibus nobis.
+</header>
+    B<sub>1</sub> <br>
+    A<sup>2</sup>
+    
+</body>
+
+</html>
