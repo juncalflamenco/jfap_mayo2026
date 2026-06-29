@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Original: https://codepen.io/Eniun/full/mddXYoR -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <title>Infobox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            background-color: #1C1D22;
+        }
+        section{
+            /* border: 1px solid yellow; */
+            max-width:15rem;
+        }
+        header{
+            top: 10px;
+        }
+        footer{
+            bottom: 10px;
+        }
+        .arriba-abajo{
+            width:100%;
+            position:fixed;
+            border:1px solid rgb(253, 27, 27);
+        }
+        .contenedor{
+            /* border:1px solid white; */
+            width:65vw;
+            margin:0 auto;
+            padding-top:7rem;
+            color:white;
+            text-align: center;
+        }
+        .cajas{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap:2rem;
+
+            padding-top:5rem;
+        }
+
+        .icono{
+            font-size: 3.5rem;
+            padding-bottom: 1rem;
+            color:tomato;
+        }
+        .texto{
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="arriba-abajo"></header>
+<div class="contenedor">
+    <h1>This is an info-box </h1>
+    <div class="cajas">
+        <section>
+            <p class="icono"><i class="fa-solid fa-star"></i></p>
+            <p class="texto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Adipisci incidunt, laudantium nostrum minus fuga aut dolore fugit cupiditate qui.</p>
+        </section>
+        <section>
+            <p class="icono"><i class="fa-solid fa-thumbs-up"></i></p>
+            <p class="texto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Adipisci incidunt, laudantium nostrum minus fuga aut dolore fugit cupiditate qui.</p>
+        </section>
+        <section>
+            <p class="icono"><i class="fa-solid fa-check"></i></p>
+            <p class="texto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Adipisci incidunt, laudantium nostrum minus fuga aut dolore fugit cupiditate qui.</p>
+        </section>                
+    </div>
+</div>
+<footer class="arriba-abajo"></footer>
+</body>
+
+</html>
+            
+            
