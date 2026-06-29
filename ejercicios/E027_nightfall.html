@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Original: https://hugo-theme-nightfall.netlify.app/ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightfall</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+
+        * {
+            margin:0;
+            padding:0;
+            font-family: "Fira Mono", monospace;
+            
+        }
+        .contenedor{
+            height:100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            display: flex;
+            justify-content: space-around;
+            padding:1.5rem;
+            /* border:1px solid blue; */
+        }
+        nav li,main li{
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
+        nav a, main a{
+            color:black;
+            text-decoration: none;
+        }
+        main{
+            height:100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        main a:hover{
+            text-decoration: underline;
+        }
+        h1{
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+        footer{
+            text-align: center;
+            padding:1.2rem;
+        }
+        .negro{
+            background-color: black;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="negro">
+            <div class="logo">hello@gohugo.io ~ $</div>
+            <nav >
+                <ul>
+                    <li><a class="negro" href="">~/about</a></li>
+                    <li><a class="negro"href="">~/blog</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Hugo Nightfall</h1>
+            <ul>
+                <li><a href="">github</a></li>
+                <li><a href="">twitter</a></li>
+                <li><a href="">linkedin</a></li>
+                <li><a href="">email</a></li>
+            </ul>
+        </main>
+        <footer class="negro">
+            © 2026 Hugo Nightfall, Built with Hugo and Nightfall theme
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+Ejemplo de etiquetas semánticas en HTML
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<title>Ejemplo Semántico</title>
+	</head>
+	<body>
+		<header>
+			<h1>Mi sitio web</h1>
+			<nav>
+				<ul>
+					<li><a href="#">Inicio</a></li>
+					<li><a href="#">Acerca</a></li>
+					<li><a href="#">Contacto</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<article>
+				<h2>Artículo principal</h2>
+				<p>Contenido del artículo que explica el uso de etiquetas semánticas como article, section, nav, aside, header, footer y main.</p>
+			</article>
+
+			<section>
+				<h3>Sección complementaria</h3>
+				<p>Contenido adicional relacionado.</p>
+			</section>
+
+			<aside>
+				<h4>Barra lateral</h4>
+				<p>Información secundaria o enlaces.</p>
+			</aside>
+		</main>
+
+		<footer>
+			<p>© 2026 Ejemplo</p>
+		</footer>
+	</body>
+</html>
+
+Fin del ejemplo.
