@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- pagina original https://themewagon.github.io/RoadTrip/ -->
+    <title>Road Street</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        scroll-behavior: smooth;
+    }
+     body{
+            width: 100%;
+            min-height: 30vh;
+        }
+    .lobster-regular {
+        font-family: "Lobster", sans-serif;
+        font-weight: 400;
+        font-size: 8rem;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.705);
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .portada{
+        width: 100%;
+        height: 100vh;
+        background-image: url("Img/road\ street.jpg");
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+        position: relative;
+    }
+    .segunda{
+        background-image: url("Img/banner2.jpg");
+    }
+    .tercera{
+        background-image: url("Img/banner5.jpg");
+    }
+    .cuarta{
+        background-image: url("Img/banner4.jpg")
+    }
+    .quinta{
+        background-image: url("Img/banner3.jpg")
+    }
+    .sexta{
+        background-color: rgb(238, 74, 74);
+    }
+    .fondo{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(32, 32, 32, 0.507);
+    }
+    .fijo{
+        position: fixed;
+        top: 1.5rem;
+        left: 1.5rem;
+        z-index: 100;
+        color: white;
+        font-size: 1.3rem;
+        border: 1px solid white;
+        border-radius: 0.5rem;
+        padding: 0.5rem
+    }
+    .negrita{
+        font-weight: bold;
+    }
+    .flecha{
+        position: absolute;
+        bottom: 2.3rem;
+        left: 50%;
+        transform: translate(-50%);
+
+        color: white;
+        font-size: 1.5rem;
+        border-radius: 2rem;
+        padding: 0.7rem;
+        background-color: rgba(245, 245, 245, 0.171);
+    }
+    .flecha a{
+        color: white;
+    }
+    .flecha:hover{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .flecha:hover i{
+        color: rgba(255, 255, 255, 0.407);
+    }
+    
+    section {
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+        background-attachment: fixed;
+    }
+    .fondo {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.45);
+        position: relative;
+      }
+    .caja {
+        width: 48vw;
+        min-height: 30vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 4rem;
+        text-align: center;
+        border-radius: 3px;
+        color: rgba(255, 255, 255, 0.762);
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+
+        font-size: 1.1rem;
+        line-height: 2rem;
+        }
+        .aprende {
+            color: white;
+            font-weight: bold;
+            padding: 0.6rem 1.4rem;
+            border: 1px solid rgba(255, 255, 255, 0.336);
+            border-radius: 3px;
+            text-decoration: none;
+        }
+
+        .aprende-mas {
+            margin-top: 2rem;
+        }
+
+        .aprende:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }    
+
+    </style>
+</head>
+<body>
+    <header class="fijo">
+        <p><span class="negrita">Road Trip</span> by Template</p>
+    </header>
+    <section class="portada">
+        <div class="fondo">
+            <h1 class="lobster-regular">This is Road Trip</h1>
+            <p class="flecha">
+                <a href="#second"><i class="fa-solid fa-angle-down"></i></a>
+            </p>
+        </div>
+    </section>
+    <section class="segunda" id="second">
+        <div class="fondo">
+            <div class="caja">
+                <h2>Nibh non lobortis mus nibh</h2>
+                <p class="subtitulo">01.01.2017</p>
+                <p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+                <p class="aprende-mas"><a class="aprende" href="">LEARN MORE</a></p>
+            </div>
+             <p class="flecha">
+                <a href="#third"><i class="fa-solid fa-angle-down"></i></a>
+            </p>
+        </div>
+    </section>
+    <section class="tercera" id="third">
+        <div class="fondo">
+            <div class="caja">
+                <h2>Mus elit a ultricies at</h2>
+                <p class="subtitulo">12.21.2016</p>
+                <p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+                <p class="aprende-mas"><a class="aprende" href="">LEARN MORE</a></p>
+            </div>
+            <p class="flecha">
+                <a href="#forth"><i class="fa-solid fa-angle-down"></i></a>
+            </p> 
+        </div>
+    </section>
+    <section class="cuarta" id="fourth">
+        <div class="fondo">
+            <div class="caja">
+            <h2>Varius a cursus aliquet</h2>
+            <p class="subtitulo">11.11.2016</p>
+            <p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+            <p class="aprende-mas"><a class="aprende" href="">LEARN MORE</a></p>
+        </div>
+            <p class="flecha">
+                <a href="#fifth"><i class="fa-solid fa-angle-down"></i></a>
+            </p> 
+        </div>
+    </section>
+    <section class="quinta" id="fifth">
+        <div class="fondo">
+            <div class="caja">
+                <h2>Luctus blandit mi lectus in nascetur</h2>
+                <p class="subtitulo">10.30.2016</p>
+                <p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+                <p class="aprende-mas"><a class="aprende" href="">LEARN MORE</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="sexta">
+
+    </section>
+    
+</body>
+</html>

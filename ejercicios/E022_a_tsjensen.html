@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Tsjensen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .imagen {
+            height: 100vh;
+            width: 100vw;
+            background-image: url("https://picsum.photos/1920/1080");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            color: white;
+            margin-bottom: 0.2rem;
+        }
+
+        div p {
+            color: white;
+            text-align: center;
+        }
+
+        .contenedor {
+            box-sizing: border-box;
+            padding-top: 10vh;
+            margin: 0 auto;
+            text-align: center;
+            background-color: rgba(128, 128, 128, 0.212);
+        }
+
+        .redonda {
+            width: 20vh;
+            height: 20vh;
+            margin-bottom: 1rem;
+            border-radius: 10vh;
+            border: 2px solid white;
+        }
+
+        div li {
+            display: inline-block;
+            padding: 0.5rem;
+            font-size: 1.8rem;
+            color: white;
+            border: 2px solid white;
+            border-radius: 2rem;
+            margin-right: 2rem;
+        }
+        .texto-primero{
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .texto-segundo{
+            margin-top: 1.2rem;
+            font-size: 0.90rem;
+            padding-bottom: 1.8rem;
+        }
+        div li a{
+            text-decoration: none;
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="imagen">
+        <div class="contenedor">
+            <img class="redonda" src="Img/favicon.png" alt="">
+            <h1>Fuse Core</h1>
+            <p class="texto-primero">Frontend Developer</p>
+            <ul>
+                <li> <a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li> <a href=""><i class="fa-brands fa-weibo"></i></a></li>
+                <li> <a href=""><i class="fa-brands fa-gitlab"></i> </a></li>
+                <li> <a href=""><i class="fa-brands fa-github"></i></a></li>
+                <li> <a href=""><i class="fa-brands fa-github"></i> </a></li>
+                <li> <a href=""><i class="fa-regular fa-envelope"></i></a></li>
+                <li> <a href=""><i class="fa-solid fa-key"></i></a></li>
+            </ul>
+            <p class="texto-segundo">Any (multiline) text containing simple HTML, such as links or ...lorem ipsum</p>
+        </div>
+    </div>
+</body>
+
+</html>
